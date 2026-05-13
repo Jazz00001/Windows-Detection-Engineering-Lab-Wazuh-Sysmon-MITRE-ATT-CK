@@ -109,7 +109,7 @@ screenshots/archive/
 
 # Validated Detections
 
- DET-001: PowerShell Encoded Command Execution
+ ## DET-001: PowerShell Encoded Command Execution
 
 This detection identifies PowerShell encoded command execution activity, which can be used by attackers to obfuscate malicious commands and evade basic command-line review.
 
@@ -125,7 +125,7 @@ This detection identifies PowerShell encoded command execution activity, which c
 Evidence:
 
 
-screenshots/evidence/04-powershell-alert.png
+[Powershell Alert](04-powershell-alert.png)
 
 
 ---
