@@ -125,12 +125,12 @@ This detection identifies PowerShell encoded command execution activity, which c
 Evidence:
 
 
-[Powershell Alert](04-powershell-alert.png)
+[Powershell Alert](screenshots/04-powershell-alert.png)
 
 
 ---
 
- DET-002: Local User Account Creation
+ ## DET-002: Local User Account Creation
 
 This detection identifies local account creation activity, which can be used by attackers for persistence after gaining access to a system.
 
@@ -146,7 +146,7 @@ This detection identifies local account creation activity, which can be used by 
 Evidence:
 
 
-screenshots/05-local-user-created-alert.png
+![Local user](screenshots/05-local-user-created-alert.png)
 
 
 ---
