@@ -189,6 +189,27 @@ Evidence:
 
 ![Defender EICAR](screenshots/13-eicar-defender-alert.png)
 
+---
+
+## DET-010: Atomic Red Team Framework Activity
+
+This detection identifies Atomic Red Team framework activity, which is commonly used for controlled adversary emulation and MITRE ATT&CK-based detection validation. In an enterprise environment, unexpected Atomic Red Team execution may indicate unauthorized security testing or suspicious PowerShell-based activity.
+
+| Field | Value |
+|---|---|
+| Custom Rule | 100109 |
+| MITRE Technique | T1059.001 |
+| Tactic | Execution |
+| Log Source | Sysmon Event ID 1 |
+| Test Command | `Invoke-AtomicTest T1059.001 -ShowDetailsBrief` |
+| Status | Detected |
+
+Evidence:
+
+
+![Atomic](screenshots/14-atomic-red-team-alert.png)
+
+
 
 ---
 
