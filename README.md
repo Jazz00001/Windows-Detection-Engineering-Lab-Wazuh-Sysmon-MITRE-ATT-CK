@@ -125,7 +125,7 @@ This detection identifies PowerShell encoded command execution activity, which c
 Evidence:
 
 
-[Powershell Alert](screenshots/04-powershell-alert.png)
+![Powershell Alert](screenshots/04-powershell-alert.png)
 
 
 ---
@@ -151,7 +151,7 @@ Evidence:
 
 ---
 
- DET-003: Windows Service Creation / Modification
+ ## DET-003: Windows Service Creation / Modification
 
 This detection identifies Windows service creation or modification activity, which can be abused for persistence or privilege escalation.
 
@@ -171,7 +171,7 @@ Evidence:
 
 ---
 
- DET-009: Windows Defender Malware-Test Detection
+ ## DET-009: Windows Defender Malware-Test Detection
 
 This detection identifies Windows Defender malware-test telemetry generated from a safe EICAR test file. It demonstrates custom rule chaining from built-in Wazuh Defender detections.
 
@@ -186,9 +186,9 @@ This detection identifies Windows Defender malware-test telemetry generated from
 
 Evidence:
 
-```text
-screenshots/08-defender-eicar-custom-alert.png
-```
+
+![Defender EICAR](screenshots/08-defender-eicar-custom-alert.png)
+
 
 ---
 
@@ -196,11 +196,11 @@ screenshots/08-defender-eicar-custom-alert.png
 
 | Detection | Evidence |
 |---|---|
-| DET-001 PowerShell encoded command | `screenshots/evidence/04-powershell-alert.png` |
-| DET-002 Local user account creation | `screenshots/evidence/05-local-user-created-alert.png` |
-| DET-003 Windows service creation/modification | `screenshots/evidence/06-service-creation-alert.png` |
-| DET-009 EICAR malware-test detection | `screenshots/evidence/13-eicar-defender-alert.png` |
-| DET-010 Atomic Red Team framework activity | `screenshots/evidence/14-atomic-red-team-alert.png` |
+| DET-001 PowerShell encoded command | ![powershell](screenshots/evidence/04-powershell-alert.png) |
+| DET-002 Local user account creation | ![Local user](screenshots/evidence/05-local-user-created-alert.png) |
+| DET-003 Windows service creation/modification | ![Creation alert](screenshots/evidence/06-service-creation-alert.png) |
+| DET-009 EICAR malware-test detection | ![EICAR](screenshots/evidence/13-eicar-defender-alert.png) |
+| DET-010 Atomic Red Team framework activity | ![Atomic](screenshots/evidence/14-atomic-red-team-alert.png) |
 ---
 
 # Documentation
