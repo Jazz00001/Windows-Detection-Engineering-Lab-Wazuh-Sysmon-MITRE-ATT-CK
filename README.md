@@ -187,7 +187,7 @@ This detection identifies Windows Defender malware-test telemetry generated from
 Evidence:
 
 
-![Defender EICAR](screenshots/08-defender-eicar-custom-alert.png)
+![Defender EICAR](screenshots/Generate-test-1-PowerShell-encoded-command-pt2.png)
 
 
 ---
@@ -196,11 +196,11 @@ Evidence:
 
 | Detection | Evidence |
 |---|---|
-| DET-001 PowerShell encoded command | ![powershell](screenshots/evidence/04-powershell-alert.png) |
-| DET-002 Local user account creation | ![Local user](screenshots/evidence/05-local-user-created-alert.png) |
-| DET-003 Windows service creation/modification | ![Creation alert](screenshots/evidence/06-service-creation-alert.png) |
-| DET-009 EICAR malware-test detection | ![EICAR](screenshots/evidence/13-eicar-defender-alert.png) |
-| DET-010 Atomic Red Team framework activity | ![Atomic](screenshots/evidence/14-atomic-red-team-alert.png) |
+| DET-001 PowerShell encoded command | ![powershell](screenshots/04-powershell-alert.png) |
+| DET-002 Local user account creation | ![Local user](screenshots/05-local-user-created-alert.png) |
+| DET-003 Windows service creation/modification | ![Creation alert](screenshots/06-service-creation-alert.png) |
+| DET-009 EICAR malware-test detection | ![EICAR](screenshots/13-eicar-defender-alert.png) |
+| DET-010 Atomic Red Team framework activity | ![Atomic](screenshots/14-atomic-red-team-alert.png) |
 ---
 
 # Documentation
