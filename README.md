@@ -58,37 +58,6 @@ The lab is built using a controlled local virtual environment. Windows endpoint 
 | DET-010 | Atomic Red Team framework activity | 100109 | Sysmon Event ID 1 | T1059.001 |
 ---
 
-# Repository Structure
-
-assets/
-  architecture-diagram.png
-
-rules/windows/
-  windows_detection_engineering_rules.xml
-
-validation/
-  validation-matrix.md
-  test-commands.md
-  false-positive-tuning.md
-
-docs/
-  detection-notes.md
-  analyst-triage-guide.md
-  rollback-plan.md
-  redaction-policy.md
-  safe-testing-scope.md
-
-examples/sanitized-alerts/
-  powershell-encoded-command-alert.json
-  local-user-created-alert.json
-  service-creation-alert.json
-
-screenshots/evidence/
-  curated proof screenshots
-
-screenshots/archive/
-  setup, raw testing, troubleshooting, and extra screenshots
----
 
 # Detection Engineering Workflow
 
