@@ -1,0 +1,60 @@
+<group name="windows,detection_engineering,">
+
+  <!--
+    Project: Windows Detection Engineering Lab - Wazuh + Sysmon + MITRE ATT&CK
+    Environment: Windows 10 endpoint + Sysmon + Wazuh 4.7.5
+    Purpose: Custom detection engineering rules built on top of validated Wazuh alerts
+  -->
+
+  <!-- DET-001: PowerShell Encoded Command -->
+  <rule id="100100" level="10">
+    <if_sid>92057</if_sid>
+    <description>Detection Engineering: PowerShell encoded command execution observed on Windows endpoint</description>
+    <mitre>
+      <id>T1059.001</id>
+    </mitre>
+    <group>windows,detection_engineering,powershell,sysmon,attack.execution,attack.t1059.001,</group>
+  </rule>
+
+  <!-- DET-002: Local User Account Creation -->
+  <rule id="100101" level="9">
+    <if_sid>60109</if_sid>
+    <description>Detection Engineering: Local or domain user account created or enabled on Windows endpoint</description>
+    <mitre>
+      <id>T1136.001</id>
+    </mitre>
+    <group>windows,detection_engineering,account_creation,persistence,attack.t1136.001,</group>
+  </rule>
+
+  <!-- DET-003: Windows Service Creation / Modification -->
+  <rule id="100102" level="10">
+    <if_sid>92307</if_sid>
+    <description>Detection Engineering: Windows service creation or service modification observed</description>
+    <mitre>
+      <id>T1543.003</id>
+    </mitre>
+    <group>windows,detection_engineering,windows_service,persistence,privilege_escalation,attack.t1543.003,</group>
+  </rule>
+
+  <!-- DET-009: Windows Defender / EICAR Malware-Test Detection -->
+  <rule id="100108" level="12">
+    <if_sid>62123</if_sid>
+    <description>Detection Engineering: Windows Defender malware or EICAR test detection observed</description>
+    <mitre>
+      <id>T1204.002</id>
+    </mitre>
+    <group>windows,detection_engineering,defender,eicar,malware_test,user_execution,attack.t1204.002,</group>
+  </rule>
+
+  <!-- DET-010: Atomic Red Team Framework Activity -->
+  <rule id="100109" level="10">
+    <if_sid>61603</if_sid>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)Invoke-Atomic(Test|RedTeam)</field>
+    <description>Detection Engineering: Atomic Red Team adversary emulation framework activity observed</description>
+    <mitre>
+      <id>T1059.001</id>
+    </mitre>
+    <group>windows,detection_engineering,sysmon,atomic_red_team,adversary_emulation,powershell,attack.t1059.001,</group>
+  </rule>
+
+</group>
