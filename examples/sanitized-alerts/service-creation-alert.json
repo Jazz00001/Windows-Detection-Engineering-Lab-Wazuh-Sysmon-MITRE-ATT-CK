@@ -1,0 +1,102 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.01.15",
+  "_id": "JazzRedactedServiceEvent001",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.0.2.25",
+      "name": "JAZZ-WIN10-LAB",
+      "id": "001"
+    },
+    "manager": {
+      "name": "Jazz-Wazuh-Server"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "image": "C:\\\\Windows\\\\system32\\\\services.exe",
+          "targetObject": "HKLM\\\\System\\\\CurrentControlSet\\\\Services\\\\WazuhLabSvc\\\\ImagePath",
+          "processGuid": "{11111111-2222-3333-4444-555555555555}",
+          "processId": "704",
+          "utcTime": "2026-01-15 10:30:00.000",
+          "ruleName": "T1031,T1050",
+          "details": "C:\\\\Windows\\\\System32\\\\cmd.exe /c whoami",
+          "eventType": "SetValue",
+          "user": "NT AUTHORITY\\\\SYSTEM"
+        },
+        "system": {
+          "eventID": "13",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Registry value set:\r\nRuleName: T1031,T1050\r\nEventType: SetValue\r\nUtcTime: 2026-01-15 10:30:00.000\r\nProcessGuid: {11111111-2222-3333-4444-555555555555}\r\nProcessId: 704\r\nImage: C:\\Windows\\system32\\services.exe\r\nTargetObject: HKLM\\System\\CurrentControlSet\\Services\\WazuhLabSvc\\ImagePath\r\nDetails: C:\\Windows\\System32\\cmd.exe /c whoami\r\nUser: JAZZ-WIN10-LAB\\Jazz\"",
+          "version": "2",
+          "systemTime": "2026-01-15T10:30:00.0000000Z",
+          "eventRecordID": "9841",
+          "threadID": "3936",
+          "computer": "JAZZ-WIN10-LAB",
+          "task": "13",
+          "processID": "2996",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 10,
+      "description": "Detection Engineering: Windows service creation or service modification observed",
+      "groups": [
+        "windows",
+        "detection_engineering",
+        "windows_service",
+        "persistence",
+        "privilege_escalation",
+        "attack.t1543.003"
+      ],
+      "mitre": {
+        "technique": [
+          "Windows Service"
+        ],
+        "id": [
+          "T1543.003"
+        ],
+        "tactic": [
+          "Persistence",
+          "Privilege Escalation"
+        ]
+      },
+      "id": "100102"
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1705329000.123456",
+    "full_log": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"13\",\"version\":\"2\",\"level\":\"4\",\"task\":\"13\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2026-01-15T10:30:00.0000000Z\",\"eventRecordID\":\"9841\",\"processID\":\"2996\",\"threadID\":\"3936\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"JAZZ-WIN10-LAB\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"Registry value set:\\r\\nRuleName: T1031,T1050\\r\\nEventType: SetValue\\r\\nUtcTime: 2026-01-15 10:30:00.000\\r\\nProcessGuid: {11111111-2222-3333-4444-555555555555}\\r\\nProcessId: 704\\r\\nImage: C:\\\\Windows\\\\system32\\\\services.exe\\r\\nTargetObject: HKLM\\\\System\\\\CurrentControlSet\\\\Services\\\\WazuhLabSvc\\\\ImagePath\\r\\nDetails: C:\\\\Windows\\\\System32\\\\cmd.exe /c whoami\\r\\nUser: NT AUTHORITY\\\\SYSTEM\\\"\"},\"eventdata\":{\"ruleName\":\"T1031,T1050\",\"eventType\":\"SetValue\",\"utcTime\":\"2026-01-15 10:30:00.000\",\"processGuid\":\"{11111111-2222-3333-4444-555555555555}\",\"processId\":\"704\",\"image\":\"C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\services.exe\",\"targetObject\":\"HKLM\\\\\\\\System\\\\\\\\CurrentControlSet\\\\\\\\Services\\\\\\\\WazuhLabSvc\\\\\\\\ImagePath\",\"details\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\cmd.exe /c whoami\",\"user\":\"NT AUTHORITY\\\\\\\\SYSTEM\"}}}",
+    "timestamp": "2026-01-15T10:31:00.000+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-01-15T10:31:00.000Z"
+    ]
+  },
+  "highlight": {
+    "rule.id": [
+      "@opensearch-dashboards-highlighted-field@100102@/opensearch-dashboards-highlighted-field@"
+    ],
+    "manager.name": [
+      "@opensearch-dashboards-highlighted-field@Jazz-Wazuh-Server@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1705329060000
+  ]
+}

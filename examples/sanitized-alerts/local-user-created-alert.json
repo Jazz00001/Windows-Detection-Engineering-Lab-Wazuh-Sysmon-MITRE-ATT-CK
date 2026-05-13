@@ -1,0 +1,113 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.01.15",
+  "_id": "hSxgIZ4BcD0OrWxJAGDW",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "192.0.2.15",
+      "name": "JAZZ-WIN10-LAB",
+      "id": "001"
+    },
+    "manager": {
+      "name": "JAZZ-WAZUH-SERVER"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "subjectLogonId": "0xf8e74",
+          "scriptPath": "%%1793",
+          "passwordLastSet": "%%1794",
+          "homeDirectory": "%%1793",
+          "userParameters": "%%1793",
+          "subjectDomainName": "JAZZ-WIN10-LAB",
+          "displayName": "%%1793",
+          "accountExpires": "%%1794",
+          "homePath": "%%1793",
+          "samAccountName": "Jazz_Test_User",
+          "targetUserName": "Jazz_Test_User",
+          "subjectUserSid": "S-1-5-21-1111111111-2222222222-3333333333-1001",
+          "primaryGroupId": "513",
+          "logonHours": "%%1797",
+          "targetDomainName": "JAZZ-WIN10-LAB",
+          "profilePath": "%%1793",
+          "userWorkstations": "%%1793",
+          "oldUacValue": "0x0",
+          "newUacValue": "0x15",
+          "targetSid": "S-1-5-21-1111111111-2222222222-3333333333-1003",
+          "userAccountControl": "    %%2080    %%2082    %%2084",
+          "subjectUserName": "Jazz"
+        },
+        "system": {
+          "eventID": "4720",
+          "keywords": "0x8020000000000000",
+          "providerGuid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+          "level": "0",
+          "channel": "Security",
+          "opcode": "0",
+          "message": "\"A user account was created.\r\n\r\nSubject:\r\n\tSecurity ID:\t\tS-1-5-21-1111111111-2222222222-3333333333-1001\r\n\tAccount Name:\t\tJazz\r\n\tAccount Domain:\t\tJAZZ-WIN10-LAB\r\n\tLogon ID:\t\t0xF8E74\r\n\r\nNew Account:\r\n\tSecurity ID:\t\tS-1-5-21-1111111111-2222222222-3333333333-1003\r\n\tAccount Name:\t\tJazz_Test_User\r\n\tAccount Domain:\t\tJAZZ-WIN10-LAB\r\n\r\nAttributes:\r\n\tSAM Account Name:\tJazz_Test_User\r\n\tDisplay Name:\t\t<value not set>\r\n\tUser Principal Name:\t-\r\n\tHome Directory:\t\t<value not set>\r\n\tHome Drive:\t\t<value not set>\r\n\tScript Path:\t\t<value not set>\r\n\tProfile Path:\t\t<value not set>\r\n\tUser Workstations:\t<value not set>\r\n\tPassword Last Set:\t<never>\r\n\tAccount Expires:\t\t<never>\r\n\tPrimary Group ID:\t513\r\n\tAllowed To Delegate To:\t-\r\n\tOld UAC Value:\t\t0x0\r\n\tNew UAC Value:\t\t0x15\r\n\tUser Account Control:\t\r\n\t\tAccount Disabled\r\n\t\t'Password Not Required' - Enabled\r\n\t\t'Normal Account' - Enabled\r\n\tUser Parameters:\t<value not set>\r\n\tSID History:\t\t-\r\n\tLogon Hours:\t\tAll\r\n\r\nAdditional Information:\r\n\tPrivileges\t\t-\"",
+          "version": "0",
+          "systemTime": "2026-01-15T10:15:30.0000000Z",
+          "eventRecordID": "69066",
+          "threadID": "2652",
+          "computer": "JAZZ-WIN10-LAB",
+          "task": "13824",
+          "processID": "728",
+          "severityValue": "AUDIT_SUCCESS",
+          "providerName": "Microsoft-Windows-Security-Auditing"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 2,
+      "mail": false,
+      "level": 9,
+      "description": "Detection Engineering: Local or domain user account created or enabled on Windows endpoint",
+      "groups": [
+        "windows",
+        "detection_engineering",
+        "account_creation",
+        "persistence",
+        "attack.t1136.001"
+      ],
+      "mitre": {
+        "technique": [
+          "Local Account"
+        ],
+        "id": [
+          "T1136.001"
+        ],
+        "tactic": [
+          "Persistence"
+        ]
+      },
+      "id": "100101"
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1778676397.1539852",
+    "full_log": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Security-Auditing\",\"providerGuid\":\"{54849625-5478-4994-a5ba-3e3b0328c30d}\",\"eventID\":\"4720\",\"version\":\"0\",\"level\":\"0\",\"task\":\"13824\",\"opcode\":\"0\",\"keywords\":\"0x8020000000000000\",\"systemTime\":\"2026-01-15T10:15:30.0000000Z\",\"eventRecordID\":\"69066\",\"processID\":\"728\",\"threadID\":\"2652\",\"channel\":\"Security\",\"computer\":\"JAZZ-WIN10-LAB\",\"severityValue\":\"AUDIT_SUCCESS\",\"message\":\"\\\"A user account was created.\\r\\n\\r\\nSubject:\\r\\n\\tSecurity ID:\\t\\tS-1-5-21-1111111111-2222222222-3333333333-1001\\r\\n\\tAccount Name:\\t\\tJazz\\r\\n\\tAccount Domain:\\t\\tJAZZ-WIN10-LAB\\r\\n\\tLogon ID:\\t\\t0xF8E74\\r\\n\\r\\nNew Account:\\r\\n\\tSecurity ID:\\t\\tS-1-5-21-1111111111-2222222222-3333333333-1003\\r\\n\\tAccount Name:\\t\\tJazz_Test_User\\r\\n\\tAccount Domain:\\t\\tJAZZ-WIN10-LAB\\r\\n\\r\\nAttributes:\\r\\n\\tSAM Account Name:\\tJazz_Test_User\\r\\n\\tDisplay Name:\\t\\t<value not set>\\r\\n\\tUser Principal Name:\\t-\\r\\n\\tHome Directory:\\t\\t<value not set>\\r\\n\\tHome Drive:\\t\\t<value not set>\\r\\n\\tScript Path:\\t\\t<value not set>\\r\\n\\tProfile Path:\\t\\t<value not set>\\r\\n\\tUser Workstations:\\t<value not set>\\r\\n\\tPassword Last Set:\\t<never>\\r\\n\\tAccount Expires:\\t\\t<never>\\r\\n\\tPrimary Group ID:\\t513\\r\\n\\tAllowed To Delegate To:\\t-\\r\\n\\tOld UAC Value:\\t\\t0x0\\r\\n\\tNew UAC Value:\\t\\t0x15\\r\\n\\tUser Account Control:\\t\\r\\n\\t\\tAccount Disabled\\r\\n\\t\\t'Password Not Required' - Enabled\\r\\n\\t\\t'Normal Account' - Enabled\\r\\n\\tUser Parameters:\\t<value not set>\\r\\n\\tSID History:\\t\\t-\\r\\n\\tLogon Hours:\\t\\tAll\\r\\n\\r\\nAdditional Information:\\r\\n\\tPrivileges\\t\\t-\\\"\"},\"eventdata\":{\"targetUserName\":\"Jazz_Test_User\",\"targetDomainName\":\"JAZZ-WIN10-LAB\",\"targetSid\":\"S-1-5-21-1111111111-2222222222-3333333333-1003\",\"subjectUserSid\":\"S-1-5-21-1111111111-2222222222-3333333333-1001\",\"subjectUserName\":\"Jazz\",\"subjectDomainName\":\"JAZZ-WIN10-LAB\",\"subjectLogonId\":\"0xf8e74\",\"samAccountName\":\"Jazz_Test_User\",\"displayName\":\"%%1793\",\"homeDirectory\":\"%%1793\",\"homePath\":\"%%1793\",\"scriptPath\":\"%%1793\",\"profilePath\":\"%%1793\",\"userWorkstations\":\"%%1793\",\"passwordLastSet\":\"%%1794\",\"accountExpires\":\"%%1794\",\"primaryGroupId\":\"513\",\"oldUacValue\":\"0x0\",\"newUacValue\":\"0x15\",\"userAccountControl\":\"    %%2080    %%2082    %%2084\",\"userParameters\":\"%%1793\",\"logonHours\":\"%%1797\"}}}",
+    "timestamp": "2026-01-15T10:16:11.000+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-01-15T10:16:11.000Z"
+    ]
+  },
+  "highlight": {
+    "rule.id": [
+      "@opensearch-dashboards-highlighted-field@100101@/opensearch-dashboards-highlighted-field@"
+    ],
+    "manager.name": [
+      "@opensearch-dashboards-highlighted-field@JAZZ-WAZUH-SERVER@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1778676397241
+  ]
+}

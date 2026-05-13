@@ -1,0 +1,114 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.01.01",
+  "_id": "NSz9IJ4BcD0OrWxJnWCV",
+  "_version": 1,
+  "_score": null,
+  "_source": {
+    "input": {
+      "type": "log"
+    },
+    "agent": {
+      "ip": "10.10.10.50",
+      "name": "Jazz-Windows-Endpoint",
+      "id": "001"
+    },
+    "manager": {
+      "name": "Jazz-Wazuh-Server"
+    },
+    "data": {
+      "win": {
+        "eventdata": {
+          "originalFileName": "PowerShell.EXE",
+          "image": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "product": "Microsoft® Windows® Operating System",
+          "parentProcessGuid": "{c811e3a7-5625-6a04-7802-000000001e00}",
+          "description": "Windows PowerShell",
+          "logonGuid": "{c811e3a7-1e75-6a04-748e-0f0000000000}",
+          "parentCommandLine": "\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\"",
+          "processGuid": "{c811e3a7-5944-6a04-5d03-000000001e00}",
+          "logonId": "0xf8e74",
+          "parentProcessId": "7600",
+          "processId": "5360",
+          "currentDirectory": "C:\\\\Windows\\\\system32\\\\",
+          "utcTime": "2026-01-01 12:00:00.000",
+          "hashes": "MD5=2E5A8590CF6848968FC23DE3FA1E25F1,SHA256=9785001B0DCF755EDDB8AF294A373C0B87B2498660F724E76C4D53F9C217C7A3,IMPHASH=3D08F4848535206D772DE145804FF4B6",
+          "parentImage": "C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe",
+          "company": "Microsoft Corporation",
+          "commandLine": "\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -NoProfile -EncodedCommand dwBoAG8AYQBtAGkA",
+          "integrityLevel": "High",
+          "fileVersion": "10.0.19041.3996 (WinBuild.160101.0800)",
+          "user": "JAZZ-WIN10-LAB\\\\Jazz",
+          "terminalSessionId": "1",
+          "parentUser": "JAZZ-WIN10-LAB\\\\Jazz"
+        },
+        "system": {
+          "eventID": "1",
+          "keywords": "0x8000000000000000",
+          "providerGuid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+          "level": "4",
+          "channel": "Microsoft-Windows-Sysmon/Operational",
+          "opcode": "0",
+          "message": "\"Process Create:\r\nRuleName: -\r\nUtcTime: 2026-01-01 12:00:00.000\r\nProcessGuid: {c811e3a7-5944-6a04-5d03-000000001e00}\r\nProcessId: 5360\r\nImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nFileVersion: 10.0.19041.3996 (WinBuild.160101.0800)\r\nDescription: Windows PowerShell\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: PowerShell.EXE\r\nCommandLine: \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -EncodedCommand dwBoAG8AYQBtAGkA\r\nCurrentDirectory: C:\\Windows\\system32\\\r\nUser: JAZZ-WIN10-LAB\\Jazz\r\nLogonGuid: {c811e3a7-1e75-6a04-748e-0f0000000000}\r\nLogonId: 0xF8E74\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: MD5=2E5A8590CF6848968FC23DE3FA1E25F1,SHA256=9785001B0DCF755EDDB8AF294A373C0B87B2498660F724E76C4D53F9C217C7A3,IMPHASH=3D08F4848535206D772DE145804FF4B6\r\nParentProcessGuid: {c811e3a7-5625-6a04-7802-000000001e00}\r\nParentProcessId: 7600\r\nParentImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\r\nParentCommandLine: \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" \r\nParentUser: JAZZ-WIN10-LAB\\Jazz\"",
+          "version": "5",
+          "systemTime": "2026-01-01T12:00:00.0000000Z",
+          "eventRecordID": "9720",
+          "threadID": "3936",
+          "computer": "JAZZ-WIN10-LAB",
+          "task": "1",
+          "processID": "2996",
+          "severityValue": "INFORMATION",
+          "providerName": "Microsoft-Windows-Sysmon"
+        }
+      }
+    },
+    "rule": {
+      "firedtimes": 1,
+      "mail": false,
+      "level": 10,
+      "description": "Detection Engineering: PowerShell encoded command execution observed on Windows endpoint",
+      "groups": [
+        "windows",
+        "detection_engineering",
+        "powershell",
+        "sysmon",
+        "attack.execution",
+        "attack.t1059.001"
+      ],
+      "mitre": {
+        "technique": [
+          "PowerShell"
+        ],
+        "id": [
+          "T1059.001"
+        ],
+        "tactic": [
+          "Execution"
+        ]
+      },
+      "id": "100100"
+    },
+    "location": "EventChannel",
+    "decoder": {
+      "name": "windows_eventchannel"
+    },
+    "id": "1778669947.1384667",
+    "full_log": "{\"win\":{\"system\":{\"providerName\":\"Microsoft-Windows-Sysmon\",\"providerGuid\":\"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}\",\"eventID\":\"1\",\"version\":\"5\",\"level\":\"4\",\"task\":\"1\",\"opcode\":\"0\",\"keywords\":\"0x8000000000000000\",\"systemTime\":\"2026-01-01T12:00:00.0000000Z\",\"eventRecordID\":\"9720\",\"processID\":\"2996\",\"threadID\":\"3936\",\"channel\":\"Microsoft-Windows-Sysmon/Operational\",\"computer\":\"JAZZ-WIN10-LAB\",\"severityValue\":\"INFORMATION\",\"message\":\"\\\"Process Create:\\r\\nRuleName: -\\r\\nUtcTime: 2026-01-01 12:00:00.000\\r\\nProcessGuid: {c811e3a7-5944-6a04-5d03-000000001e00}\\r\\nProcessId: 5360\\r\\nImage: C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\r\\nFileVersion: 10.0.19041.3996 (WinBuild.160101.0800)\\r\\nDescription: Windows PowerShell\\r\\nProduct: Microsoft® Windows® Operating System\\r\\nCompany: Microsoft Corporation\\r\\nOriginalFileName: PowerShell.EXE\\r\\nCommandLine: \\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -NoProfile -EncodedCommand dwBoAG8AYQBtAGkA\\r\\nCurrentDirectory: C:\\\\Windows\\\\system32\\\\\\r\\nUser: JAZZ-WIN10-LAB\\\\Jazz\\r\\nLogonGuid: {c811e3a7-1e75-6a04-748e-0f0000000000}\\r\\nLogonId: 0xF8E74\\r\\nTerminalSessionId: 1\\r\\nIntegrityLevel: High\\r\\nHashes: MD5=2E5A8590CF6848968FC23DE3FA1E25F1,SHA256=9785001B0DCF755EDDB8AF294A373C0B87B2498660F724E76C4D53F9C217C7A3,IMPHASH=3D08F4848535206D772DE145804FF4B6\\r\\nParentProcessGuid: {c811e3a7-5625-6a04-7802-000000001e00}\\r\\nParentProcessId: 7600\\r\\nParentImage: C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\r\\nParentCommandLine: \\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" \\r\\nParentUser: JAZZ-WIN10-LAB\\\\Jazz\\\"\"},\"eventdata\":{\"utcTime\":\"2026-01-01 12:00:00.000\",\"processGuid\":\"{c811e3a7-5944-6a04-5d03-000000001e00}\",\"processId\":\"5360\",\"image\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\powershell.exe\",\"fileVersion\":\"10.0.19041.3996 (WinBuild.160101.0800)\",\"description\":\"Windows PowerShell\",\"product\":\"Microsoft® Windows® Operating System\",\"company\":\"Microsoft Corporation\",\"originalFileName\":\"PowerShell.EXE\",\"commandLine\":\"\\\\\\\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\powershell.exe\\\\\\\" -NoProfile -EncodedCommand dwBoAG8AYQBtAGkA\",\"currentDirectory\":\"C:\\\\\\\\Windows\\\\\\\\system32\\\\\\\\\",\"user\":\"JAZZ-WIN10-LAB\\\\\\\\Jazz\",\"logonGuid\":\"{c811e3a7-1e75-6a04-748e-0f0000000000}\",\"logonId\":\"0xf8e74\",\"terminalSessionId\":\"1\",\"integrityLevel\":\"High\",\"hashes\":\"MD5=2E5A8590CF6848968FC23DE3FA1E25F1,SHA256=9785001B0DCF755EDDB8AF294A373C0B87B2498660F724E76C4D53F9C217C7A3,IMPHASH=3D08F4848535206D772DE145804FF4B6\",\"parentProcessGuid\":\"{c811e3a7-5625-6a04-7802-000000001e00}\",\"parentProcessId\":\"7600\",\"parentImage\":\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\powershell.exe\",\"parentCommandLine\":\"\\\\\\\"C:\\\\\\\\Windows\\\\\\\\System32\\\\\\\\WindowsPowerShell\\\\\\\\v1.0\\\\\\\\powershell.exe\\\\\\\"\",\"parentUser\":\"JAZZ-WIN10-LAB\\\\\\\\Jazz\"}}}",
+    "timestamp": "2026-01-01T12:00:30.000+0000"
+  },
+  "fields": {
+    "timestamp": [
+      "2026-01-01T12:00:30.000Z"
+    ]
+  },
+  "highlight": {
+    "rule.id": [
+      "@opensearch-dashboards-highlighted-field@100100@/opensearch-dashboards-highlighted-field@"
+    ],
+    "manager.name": [
+      "@opensearch-dashboards-highlighted-field@Jazz-Wazuh-Server@/opensearch-dashboards-highlighted-field@"
+    ]
+  },
+  "sort": [
+    1767268830000
+  ]
+}
