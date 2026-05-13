@@ -187,7 +187,7 @@ This detection identifies Windows Defender malware-test telemetry generated from
 Evidence:
 
 
-![Defender EICAR](screenshots/Generate-test-1-PowerShell-encoded-command-pt2.png)
+![Defender EICAR](screenshots/13-eicar-defender-alert.png)
 
 
 ---
