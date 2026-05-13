@@ -220,8 +220,8 @@ Evidence:
 | DET-001 PowerShell encoded command | ![powershell](screenshots/test-1-MITRE-ATTACK.png) |
 | DET-002 Local user account creation | ![Local user](screenshots/test-2-MITRE-ATTACK.png) |
 | DET-003 Windows service creation/modification | ![Creation alert](screenshots/test-3-MITRE-ATTACK.png) |
-| DET-009 EICAR malware-test detection | ![EICAR](screenshots/.png) |
-| DET-010 Atomic Red Team framework activity | ![Atomic](screenshots/14-atomic-red-team-alert.png) |
+| DET-009 EICAR malware-test detection | ![EICAR](screenshots/9.png) |
+| DET-010 Atomic Red Team framework activity | ![Atomic](screenshots/10.png) |
 ---
 
 # Documentation
