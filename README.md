@@ -139,7 +139,7 @@ This detection identifies PowerShell encoded command execution activity, which c
 
 Evidence:
 
-```text
+
 screenshots/evidence/04-powershell-alert.png
 
 
@@ -164,7 +164,7 @@ Evidence:
 
 ```text
 screenshots/05-local-user-created-alert.png
-```
+
 
 ---
 
@@ -183,9 +183,8 @@ This detection identifies Windows service creation or modification activity, whi
 
 Evidence:
 
-```text
-screenshots/06-service-creation-alert.png
-```
+![service-creation-alert](screenshots/06-service-creation-alert.png)
+
 
 ---
 
