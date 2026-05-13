@@ -1,6 +1,6 @@
 # Windows Detection Engineering Lab — Wazuh, Sysmon & MITRE ATT&CK
 
-## Overview
+# Overview
 
 This project extends my Enterprise SOC Lab by focusing on Windows detection engineering. It validates 5 custom Wazuh detections using Windows endpoint telemetry, Sysmon, Windows Security logs, Windows Defender events, and Atomic Red Team framework activity.
 
@@ -9,7 +9,7 @@ The goal of this project is to show how custom detection logic can be created, t
 This is a controlled local lab project. No real malware, credential theft, ransomware, or unauthorized testing was performed.
 ---
 
-## Architecture
+# Architecture
 
 ![Windows Detection Engineering Lab Architecture](assets/architecture-diagram.png)
 
@@ -17,7 +17,11 @@ The lab is built using a controlled local virtual environment. Windows endpoint 
 
 ---
 
-## Lab Environment
+# Lab Environment
+
+![Lab Architecture](assets/Lab.png)
+
+
 
 | Component | Technology |
 |---|---|
@@ -43,7 +47,7 @@ The lab is built using a controlled local virtual environment. Windows endpoint 
 
 ---
 
-## Detection Coverage
+# Detection Coverage
 
 | ID | Detection | Custom Rule | Log Source | MITRE ATT&CK |
 |---|---|---|---|---|
@@ -54,9 +58,8 @@ The lab is built using a controlled local virtual environment. Windows endpoint 
 | DET-010 | Atomic Red Team framework activity | 100109 | Sysmon Event ID 1 | T1059.001 |
 ---
 
-## Repository Structure
+# Repository Structure
 
-```text
 assets/
   architecture-diagram.png
 
@@ -87,7 +90,7 @@ screenshots/archive/
   setup, raw testing, troubleshooting, and extra screenshots
 ---
 
-## Detection Engineering Workflow
+# Detection Engineering Workflow
 
 1. Select a suspicious behavior and map it to MITRE ATT&CK.
 2. Generate controlled telemetry on the Windows 10 lab VM.
@@ -104,27 +107,9 @@ screenshots/archive/
 
 ---
 
-## Validated Detections
+# Validated Detections
 
-### DET-001: PowerShell Encoded Command
-
-This detection identifies PowerShell execution using encoded commands, a technique often seen in malicious scripts and post-exploitation activity.
-
-| Field | Value |
-|---|---|
-| Custom Rule | 100100 |
-| MITRE Technique | T1059.001 |
-| Tactic | Execution |
-| Log Source | Sysmon / Windows Event Logs |
-| Test Command | `powershell.exe -EncodedCommand` |
-| Status | Detected |
-
-Evidence:
-
-```text
-screenshots/04-powershell-alert.png
-```
-## DET-001: PowerShell Encoded Command Execution
+ DET-001: PowerShell Encoded Command Execution
 
 This detection identifies PowerShell encoded command execution activity, which can be used by attackers to obfuscate malicious commands and evade basic command-line review.
 
@@ -143,11 +128,9 @@ Evidence:
 screenshots/evidence/04-powershell-alert.png
 
 
-
-
 ---
 
-### DET-002: Local User Account Creation
+ DET-002: Local User Account Creation
 
 This detection identifies local account creation activity, which can be used by attackers for persistence after gaining access to a system.
 
@@ -162,13 +145,13 @@ This detection identifies local account creation activity, which can be used by 
 
 Evidence:
 
-```text
+
 screenshots/05-local-user-created-alert.png
 
 
 ---
 
-### DET-003: Windows Service Creation / Modification
+ DET-003: Windows Service Creation / Modification
 
 This detection identifies Windows service creation or modification activity, which can be abused for persistence or privilege escalation.
 
@@ -188,7 +171,7 @@ Evidence:
 
 ---
 
-### DET-009: Windows Defender Malware-Test Detection
+ DET-009: Windows Defender Malware-Test Detection
 
 This detection identifies Windows Defender malware-test telemetry generated from a safe EICAR test file. It demonstrates custom rule chaining from built-in Wazuh Defender detections.
 
@@ -209,7 +192,7 @@ screenshots/08-defender-eicar-custom-alert.png
 
 ---
 
-## Evidence Screenshots
+# Evidence Screenshots
 
 | Detection | Evidence |
 |---|---|
@@ -220,7 +203,7 @@ screenshots/08-defender-eicar-custom-alert.png
 | DET-010 Atomic Red Team framework activity | `screenshots/evidence/14-atomic-red-team-alert.png` |
 ---
 
-## Documentation
+# Documentation
 
 | Document | Purpose |
 |---|---|
@@ -233,7 +216,7 @@ screenshots/08-defender-eicar-custom-alert.png
 
 ---
 
-## Skills Demonstrated
+# Skills Demonstrated
 
 - Wazuh SIEM/XDR rule creation
 - Windows endpoint detection engineering
@@ -247,7 +230,7 @@ screenshots/08-defender-eicar-custom-alert.png
 - Evidence redaction and safe lab documentation
 ---
 
-## Security and Safety Notes
+# Security and Safety Notes
 
 This project was built in a controlled local lab environment for cybersecurity learning and portfolio demonstration.
 
