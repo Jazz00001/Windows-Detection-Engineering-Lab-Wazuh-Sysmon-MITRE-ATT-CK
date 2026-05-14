@@ -25,6 +25,7 @@
 - [MITRE & ATTACK Evidence Screenshots](#MITRE-&-ATTACK-Evidence-Screenshots)
 - [Documentation](#Documentation)
 - [Skills Demonstrated](#Skills-Demonstrated)
+- [Lessons Learned](#Lessons-Learned)
 - [Security and Safety Notes](#Security-and-Safety-Notes)
 - [Disclaimer](#disclaimer)
 
@@ -248,6 +249,23 @@ Evidence:
 - Alert triage documentation
 - False-positive tuning
 - Evidence redaction and safe lab documentation
+---
+
+
+## Lessons Learned
+
+- Detection engineering requires more than writing rules; each detection needs testing, validation, evidence, and documentation.
+
+- Sysmon, Windows Security logs, and Windows Defender logs provide valuable Windows endpoint visibility inside Wazuh.
+
+- MITRE ATT&CK mapping helps connect raw alerts to real adversary techniques.
+
+- Safe tools like EICAR and Atomic Red Team can validate detections without using real malware.
+
+- False-positive tuning and analyst triage notes make detections more practical for SOC workflows.
+
+- A small set of fully validated detections is stronger than a large list of unproven detections.
+
 ---
 
 # Security and Safety Notes
