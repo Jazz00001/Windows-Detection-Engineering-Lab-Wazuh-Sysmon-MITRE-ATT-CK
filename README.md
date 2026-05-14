@@ -26,6 +26,7 @@
 - [Documentation](#Documentation)
 - [Skills Demonstrated](#Skills-Demonstrated)
 - [Lessons Learned](#Lessons-Learned)
+- [Future Improvements](#Future-Improvements)
 - [Security and Safety Notes](#Security-and-Safety-Notes)
 - [Disclaimer](#disclaimer)
 
@@ -265,6 +266,13 @@ Evidence:
 - False-positive tuning and analyst triage notes make detections more practical for SOC workflows.
 
 - A small set of fully validated detections is stronger than a large list of unproven detections.
+
+---
+
+# Future Improvements
+
+Future improvements will focus on expanding the project only with detections that are fully validated and evidence-backed. Planned enhancements include adding more Windows persistence and privilege-related detections, creating Sigma rule equivalents, adding `wazuh-logtest` validation output, improving sanitized JSON evidence, building a MITRE ATT&CK coverage map, and documenting severity rationale for each detection. The lab can also be expanded with Active Directory telemetry to support more realistic enterprise-style detections such as authentication attacks, group membership changes, and domain-level account activity.
+
 
 ---
 
