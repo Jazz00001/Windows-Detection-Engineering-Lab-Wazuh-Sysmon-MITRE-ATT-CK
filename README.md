@@ -1,5 +1,21 @@
 # Windows Detection Engineering Lab — Wazuh, Sysmon & MITRE ATT&CK
 
+
+# Windows Detection Engineering Lab — Wazuh, Sysmon & MITRE ATT&CK
+
+![GitHub repo size](https://img.shields.io/github/repo-size/YOUR_USERNAME/windows-detection-engineering-wazuh)
+![GitHub last commit](https://img.shields.io/github/last-commit/YOUR_USERNAME/windows-detection-engineering-wazuh)
+![GitHub license](https://img.shields.io/github/license/YOUR_USERNAME/windows-detection-engineering-wazuh)
+![Project Status](https://img.shields.io/badge/status-validated-success)
+![Detections](https://img.shields.io/badge/detections-5%20validated-blue)
+![SIEM](https://img.shields.io/badge/SIEM-Wazuh-0052CC)
+![Telemetry](https://img.shields.io/badge/Telemetry-Sysmon-orange)
+![Endpoint](https://img.shields.io/badge/Endpoint-Windows%2010-0078D6)
+![MITRE ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-mapped-red)
+![Atomic Red Team](https://img.shields.io/badge/Atomic%20Red%20Team-validated-purple)
+![Windows Defender](https://img.shields.io/badge/Windows%20Defender-EICAR%20tested-brightgreen)
+![Environment](https://img.shields.io/badge/environment-local%20lab-lightgrey)
+
 ## Table of Contents
 
 - [Overview](#overview)
