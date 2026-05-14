@@ -217,7 +217,7 @@ Evidence:
 
 ---
 
-# MITRE&ATT&CK Evidence Screenshots
+# MITRE ATT&CK Evidence Screenshots
 
 ## MITRE&ATT&CK Dashboard
 
