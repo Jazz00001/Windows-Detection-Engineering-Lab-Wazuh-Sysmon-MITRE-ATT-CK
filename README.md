@@ -22,7 +22,7 @@
   - [DET-003: Windows Service Creation / Modification](#det-003-windows-service-creation--modification)
   - [DET-009: EICAR Malware-Test File Detection](#det-009-eicar-malware-test-file-detection)
   - [DET-010: Atomic Red Team Framework Activity](#det-010-atomic-red-team-framework-activity)
-- [MITRE & ATTACK Evidence Screenshots](#MITRE-&-ATTACK-Evidence-Screenshots)
+- [MITREATTACK Evidence Screenshots](#MITREATTACK-Evidence-Screenshots)
 - [Documentation](#Documentation)
 - [Skills Demonstrated](#Skills-Demonstrated)
 - [Lessons Learned](#Lessons-Learned)
@@ -88,6 +88,9 @@ The lab is built using a controlled local virtual environment. Windows endpoint 
 | DET-003 | Windows service creation/modification | 100102 | Windows service / process telemetry | T1543.003 |
 | DET-009 | EICAR malware-test file detection | 100108 | Windows Defender Operational | T1204.002 |
 | DET-010 | Atomic Red Team framework activity | 100109 | Sysmon Event ID 1 | T1059.001 |
+
+Note: Detection IDs reflect the original project numbering. DET-004 through DET-008 were removed during validation as they did not meet the evidence standard for this portfolio.
+
 ---
 
 
@@ -214,7 +217,7 @@ Evidence:
 
 ---
 
-# MITRE & ATTACK Evidence Screenshots
+# MITREATTACK Evidence Screenshots
 
 | Detection | Evidence |
 |---|---|
