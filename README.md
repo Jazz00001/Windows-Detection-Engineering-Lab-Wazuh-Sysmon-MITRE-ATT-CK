@@ -79,7 +79,7 @@ The lab is built using a controlled local virtual environment. Windows endpoint 
 ---
 
 
-# Detection Engineering Workflow
+## Detection Engineering Workflow
 
 1. Select a suspicious behavior and map it to MITRE ATT&CK.
 2. Generate controlled telemetry on the Windows 10 lab VM.
