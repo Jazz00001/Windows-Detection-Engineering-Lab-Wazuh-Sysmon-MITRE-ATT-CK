@@ -219,6 +219,9 @@ Evidence:
 
 # MITREATTACK Evidence Screenshots
 
+![MITRE Dashboard](screenshots/07-mitre-dashboard.png)
+
+
 | Detection | Evidence |
 |---|---|
 | DET-001 PowerShell encoded command | ![powershell](screenshots/test-1-MITRE-ATTACK.png) |
