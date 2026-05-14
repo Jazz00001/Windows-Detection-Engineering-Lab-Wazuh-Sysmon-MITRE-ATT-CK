@@ -1,5 +1,25 @@
 # Windows Detection Engineering Lab — Wazuh, Sysmon & MITRE ATT&CK
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Lab Architecture](#lab-architecture)
+- [Lab Environment](#lab-environment)
+- [Detection Coverage](#detection-coverage)
+- [Validated Detections](#Validated-Detections)
+  - [DET-001: PowerShell Encoded Command Execution](#det-001-powershell-encoded-command-execution)
+  - [DET-002: Local User Account Creation](#det-002-local-user-account-creation)
+  - [DET-003: Windows Service Creation / Modification](#det-003-windows-service-creation--modification)
+  - [DET-009: EICAR Malware-Test File Detection](#det-009-eicar-malware-test-file-detection)
+  - [DET-010: Atomic Red Team Framework Activity](#det-010-atomic-red-team-framework-activity)
+- [MITRE & ATTACK Evidence Screenshots](#MITRE-&-ATTACK-Evidence-Screenshots)
+- [Documentation](#Documentation)
+- [Skills Demonstrated](#Skills-Demonstrated)
+- [Security and Safety Notes](#Security-and-Safety-Notes)
+- [Disclaimer](#disclaimer)
+
+
+
 # Overview
 
 This project extends my Enterprise SOC Lab by focusing on Windows detection engineering. It validates 5 custom Wazuh detections using Windows endpoint telemetry, Sysmon, Windows Security logs, Windows Defender events, and Atomic Red Team framework activity.
@@ -9,7 +29,7 @@ The goal of this project is to show how custom detection logic can be created, t
 This is a controlled local lab project. No real malware, credential theft, ransomware, or unauthorized testing was performed.
 ---
 
-# Architecture
+# Lab Architecture
 
 ![Windows Detection Engineering Lab Architecture](assets/architecture-diagram.png)
 
