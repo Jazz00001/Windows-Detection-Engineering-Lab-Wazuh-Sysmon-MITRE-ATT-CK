@@ -199,7 +199,7 @@ Evidence:
 |---|---|
 | [Detection Notes](docs/Detection-Notes.pdf) | Explains project objective, workflow, implemented detections, and lessons learned |
 | [Analyst Triage Guide](docs/Analyst-Triage-Guide.pdf) | Provides SOC-style triage questions and steps for each detection |
-| [Rollback Plan](docs/rollback-plan.md) | Documents how to safely remove or rollback custom Wazuh rules |
+| [Rollback Plan](docs/Rollback-Plan.pdf) | Documents how to safely remove or rollback custom Wazuh rules |
 | [Validation Matrix](validation/validation-matrix.md) | Maps detections to commands, rules, MITRE techniques, status, and evidence |
 | [Test Commands](validation/test-commands.md) | Lists the controlled commands used to generate telemetry |
 | [False Positive Tuning Notes](validation/false-positive-tuning.md) | Documents possible false positives and tuning considerations |
