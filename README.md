@@ -219,7 +219,8 @@ Evidence:
 
 # MITRE&ATT&CK Evidence Screenshots
 
-MITRE&ATT&CK Dashboard
+## MITRE&ATT&CK Dashboard
+
 ![MITRE Dashboard](screenshots/07-mitre-dashboard.png)
 
 
