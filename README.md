@@ -202,7 +202,7 @@ Evidence:
 | [Rollback Plan](docs/Rollback-Plan.pdf) | Documents how to safely remove or rollback custom Wazuh rules |
 | [Validation Matrix](validation/validation-matrix.md) | Maps detections to commands, rules, MITRE techniques, status, and evidence |
 | [Test Commands](validation/test-commands.md) | Lists the controlled commands used to generate telemetry |
-| [False Positive Tuning Notes](validation/false-positive-tuning.md) | Documents possible false positives and tuning considerations |
+| [False Positive Tuning Notes](validation/False-Positive-Tuning-Notes.pdf) | Documents possible false positives and tuning considerations |
 
 ---
 
