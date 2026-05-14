@@ -22,7 +22,7 @@
   - [DET-003: Windows Service Creation / Modification](#det-003-windows-service-creation--modification)
   - [DET-009: EICAR Malware-Test File Detection](#det-009-eicar-malware-test-file-detection)
   - [DET-010: Atomic Red Team Framework Activity](#det-010-atomic-red-team-framework-activity)
-- [MITRE&ATT&CK Evidence Screenshots](#MITRE-ATT&CK-Evidence-Screenshots)
+- [MITRE ATT&CK Evidence Screenshots](#MITRE-ATT&CK-Evidence )
 - [Documentation](#Documentation)
 - [Skills Demonstrated](#Skills-Demonstrated)
 - [Lessons Learned](#Lessons-Learned)
@@ -217,7 +217,7 @@ Evidence:
 
 ---
 
-# MITRE ATT&CK Evidence Screenshots
+# MITRE ATT&CK Evidence 
 
 ## MITRE&ATT&CK Dashboard
 
